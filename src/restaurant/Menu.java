@@ -42,9 +42,17 @@ public class Menu {
 
     public void printMenu() {
         for(MenuItem item : menuItems) {
-            System.out.println("Id: " + item.getId() + " Description: " + item.getDescription() +
-                    " Price: " + item.getPrice());
-            System.out.println();
+            System.out.println("Id: " + item.getId() + "\tDescription: " + item.getDescription() +
+                    "\tPrice: $" + item.getPrice());
+        }
+    }
+
+    public void printMenuItem(int id) {
+        for(int i=0; i < menuItems.size(); i++) {
+            if(menuItems.get(i).getId() == id) {
+                System.out.println("Id: " + menuItems.get(i).getId() + "\tDescription: "
+                        + menuItems.get(i).getDescription() + "\tPrice: $" + menuItems.get(i).getPrice());
+            }
         }
     }
 

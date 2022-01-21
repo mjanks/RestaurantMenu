@@ -1,7 +1,7 @@
 package restaurant;
 
 public class MenuItem {
-    private static int id = 1;
+    private static int currentId = 1;
     private int menuId;
     private double price;
     private String description;
@@ -9,8 +9,8 @@ public class MenuItem {
     private boolean isNew;
 
     public MenuItem(double price, String description, String category, boolean isNew) {
-        this.menuId = id;
-        id++;
+        menuId = currentId;
+        currentId++;
         this.price = price;
         this.description = description;
         this.category = category;
@@ -35,10 +35,6 @@ public class MenuItem {
 
     public boolean isNew() {
         return isNew;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setPrice(double price) {
